@@ -75,6 +75,7 @@
 - (IBAction)transfer2ViewController:(id)sender{
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton * btn = (UIButton *) sender;
+        
         if (btn.tag == self.selectedIndex) return;//如果是自己则不跳转
         UIViewController * toVc = (UIViewController *)[self.viewControllers objectAtIndex:btn.tag];
 
