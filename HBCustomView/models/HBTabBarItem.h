@@ -16,6 +16,7 @@ typedef enum {
 
 @interface HBTabBarItem : UIView{
 
+
 }
 @property (nonatomic, assign) TabState state;
 @property (nonatomic, strong) UIImage * selectedImg;
