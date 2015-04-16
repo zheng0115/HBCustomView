@@ -9,7 +9,9 @@
 #define kScreenBounds [UIScreen mainScreen].bounds
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-
+#define kTabbarHeight 49
+#define kNavHeight 44
+#define kStatusBarHeight 20
 #import "HBTabbarViewController.h"
 
 @implementation HBTabbarViewController
@@ -29,7 +31,7 @@
         for (UIViewController * vc in self.viewControllers) {
             [self addChildViewController:vc];
         }
-        self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, kScreenWidth, kScreenHeight-80-80)];
+        self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight+kNavHeight, kScreenWidth, kScreenHeight-80-80)];
         self.contentView.backgroundColor = [UIColor blackColor];
     }
     return self;
@@ -37,7 +39,7 @@
 
 - (void)initTopBarWithColor:(UIColor *) color
                            title:(NSString *) title{
-    _topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 80)];
+    _topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kNavHeight+kStatusBarHeight)];
     _topBar.backgroundColor = color;
     UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_topBar.center.x-20, _topBar.center.y-10, 40, 20)];
     titleLabel.text = title;
@@ -50,19 +52,20 @@
 - (void)initBottomBarWithColor:(UIColor *) color
                          title:(NSString *) title{
     NSInteger index = 0;
-    _bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight-80, kScreenWidth, 80)];
+    _bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight-kTabbarHeight, kScreenWidth, kTabbarHeight)];
     _bottomBar.backgroundColor = color;
     for (UIViewController * controller in self.viewControllers) {
         index = [self.viewControllers indexOfObject:controller];
         NSInteger count = [self.viewControllers count];
-        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(index*kScreenWidth/count, 0, kScreenWidth/count, 40)];
+        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(index*kScreenWidth/count, 0, kScreenWidth/count, kTabbarHeight)];
         btn.titleLabel.text = title;
         btn.tag = index;
-//        btn.set
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn setTitle:@"hehe" forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(transfer2ViewController:) forControlEvents:UIControlEventTouchUpInside];
         [btn setExclusiveTouch:YES];
+        [btn setBackgroundImage:[UIImage imageNamed:@"daijia.bundle/images/订单.png"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"daijia.bundle/images/订单选中.png"]forState:UIControlStateHighlighted];
         [_tabBarBtns addObject:btn];
     }
     for (NSInteger i = 0; i<[_tabBarBtns count]; i++) {
@@ -75,9 +78,10 @@
 - (IBAction)transfer2ViewController:(id)sender{
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton * btn = (UIButton *) sender;
-        
         if (btn.tag == self.selectedIndex) return;//如果是自己则不跳转
         UIViewController * toVc = (UIViewController *)[self.viewControllers objectAtIndex:btn.tag];
+        
+        
 
         [self transitionFromViewController:self.currentController toViewController:toVc duration:3.5 options:UIViewAnimationOptionCurveEaseInOut animations:nil completion:^(BOOL finished) {
             self.selectedIndex = btn.tag;
