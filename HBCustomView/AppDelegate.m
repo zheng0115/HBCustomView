@@ -22,10 +22,30 @@
     NSMutableArray * vcs = [[NSMutableArray alloc] init];
     UIViewController * _1stVC =  [[UIViewController alloc] init];
     UIViewController * _2ndVC =  [[UIViewController alloc] init];
+    UIViewController * _3rdVC =  [[UIViewController alloc] init];
+    UIViewController * _4thVC =  [[UIViewController alloc] init];
+    
+    UIImage * image = [UIImage imageNamed:@"daijia.bundle/images/QQ.png"];
+    UIImageView * view = [[UIImageView alloc] initWithImage:image];
+    view.frame = CGRectMake(100, 100, 40, 40);
+    [_1stVC.view addSubview:view];
+
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(150, 150, 40, 40)];
+    [button setBackgroundImage:[UIImage imageNamed:@"daijia.bundle/images/QQ.png"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"daijia.bundle/images/QQ选中.png"] forState:UIControlStateHighlighted];
+//    [button setBackgroundColor:[UIColor whiteColor]];
+    [_1stVC.view addSubview:button];
+    
+    
     _1stVC.view.backgroundColor = [UIColor redColor];
     _2ndVC.view.backgroundColor = [UIColor greenColor];
+    _3rdVC.view.backgroundColor = [UIColor blueColor];
+    _4thVC.view.backgroundColor = [UIColor yellowColor];
     [vcs addObject:_1stVC];
     [vcs addObject:_2ndVC];
+    [vcs addObject:_3rdVC];
+    [vcs addObject:_4thVC];
+
     _1stVC.tabBarItem.title = @"草泥马";
     _2ndVC.tabBarItem.title = @"caonima";
 //    UITabBarController * rootVC = [[UITabBarController alloc] init];
