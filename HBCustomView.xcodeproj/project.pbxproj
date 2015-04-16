@@ -15,6 +15,9 @@
 		DEF2F2611ADCFD1500203EB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF2F25F1ADCFD1500203EB8 /* LaunchScreen.xib */; };
 		DEF2F26D1ADCFD1500203EB8 /* HBCustomViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F26C1ADCFD1500203EB8 /* HBCustomViewTests.m */; };
 		DEF2F2791ADCFE1800203EB8 /* HBTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2781ADCFE1800203EB8 /* HBTabbarViewController.m */; };
+		DEF2F27C1ADE0BC500203EB8 /* daijia.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DEF2F27B1ADE0BC500203EB8 /* daijia.bundle */; };
+		DEF2F2801ADF848800203EB8 /* HBTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F27F1ADF848800203EB8 /* HBTabBarItem.m */; };
+		DEF2F2831ADF907B00203EB8 /* HBBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2821ADF907B00203EB8 /* HBBarButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		DEF2F26C1ADCFD1500203EB8 /* HBCustomViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBCustomViewTests.m; sourceTree = "<group>"; };
 		DEF2F2771ADCFE1800203EB8 /* HBTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTabbarViewController.h; sourceTree = "<group>"; };
 		DEF2F2781ADCFE1800203EB8 /* HBTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTabbarViewController.m; sourceTree = "<group>"; };
+		DEF2F27B1ADE0BC500203EB8 /* daijia.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = daijia.bundle; sourceTree = "<group>"; };
+		DEF2F27E1ADF848800203EB8 /* HBTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTabBarItem.h; sourceTree = "<group>"; };
+		DEF2F27F1ADF848800203EB8 /* HBTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTabBarItem.m; sourceTree = "<group>"; };
+		DEF2F2811ADF907B00203EB8 /* HBBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBarButton.h; sourceTree = "<group>"; };
+		DEF2F2821ADF907B00203EB8 /* HBBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBarButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 		DEF2F2441ADCFD1400203EB8 = {
 			isa = PBXGroup;
 			children = (
+				DEF2F27B1ADE0BC500203EB8 /* daijia.bundle */,
+				DEF2F27D1ADF844100203EB8 /* models */,
 				DEF2F2761ADCFDE500203EB8 /* Controllers */,
 				DEF2F24F1ADCFD1400203EB8 /* HBCustomView */,
 				DEF2F2691ADCFD1500203EB8 /* HBCustomViewTests */,
@@ -131,6 +141,18 @@
 			);
 			name = Controllers;
 			path = HBCustomView/Controllers;
+			sourceTree = "<group>";
+		};
+		DEF2F27D1ADF844100203EB8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DEF2F27E1ADF848800203EB8 /* HBTabBarItem.h */,
+				DEF2F27F1ADF848800203EB8 /* HBTabBarItem.m */,
+				DEF2F2811ADF907B00203EB8 /* HBBarButton.h */,
+				DEF2F2821ADF907B00203EB8 /* HBBarButton.m */,
+			);
+			name = models;
+			path = HBCustomView/models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +238,7 @@
 				DEF2F25C1ADCFD1500203EB8 /* Main.storyboard in Resources */,
 				DEF2F2611ADCFD1500203EB8 /* LaunchScreen.xib in Resources */,
 				DEF2F25E1ADCFD1500203EB8 /* Images.xcassets in Resources */,
+				DEF2F27C1ADE0BC500203EB8 /* daijia.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +259,8 @@
 				DEF2F2791ADCFE1800203EB8 /* HBTabbarViewController.m in Sources */,
 				DEF2F2591ADCFD1500203EB8 /* ViewController.m in Sources */,
 				DEF2F2561ADCFD1500203EB8 /* AppDelegate.m in Sources */,
+				DEF2F2831ADF907B00203EB8 /* HBBarButton.m in Sources */,
+				DEF2F2801ADF848800203EB8 /* HBTabBarItem.m in Sources */,
 				DEF2F2531ADCFD1500203EB8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +452,7 @@
 				DEF2F2721ADCFD1500203EB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEF2F2731ADCFD1500203EB8 /* Build configuration list for PBXNativeTarget "HBCustomViewTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +461,7 @@
 				DEF2F2751ADCFD1500203EB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
