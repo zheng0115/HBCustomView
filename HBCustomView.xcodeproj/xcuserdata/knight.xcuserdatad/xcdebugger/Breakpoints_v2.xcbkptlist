@@ -81,6 +81,36 @@
             endingLineNumber = "83"
             landmarkName = "-transfer2ViewController:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HBTabbarViewController initBottomBarWithColor:title:]"
+                  moduleName = "HBCustomView"
+                  urlString = "file:///Users/knight/gitHubWorkspace/HBCustomView/HBCustomView/Controllers/HBTabbarViewController.m"
+                  timestampString = "450878288.21433"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "3224">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HBTabbarViewController initBottomBarWithColor:title:]"
+                  moduleName = "HBCustomView"
+                  urlString = "file:///Users/knight/gitHubWorkspace/HBCustomView/HBCustomView/Controllers/HBTabbarViewController.m"
+                  timestampString = "450878288.214532"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "3393">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
