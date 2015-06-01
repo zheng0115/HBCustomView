@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0024B31B1BF97E00FB33D8 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DE0024B21B1BF97E00FB33D8 /* Views */; };
 		DEF2F2531ADCFD1500203EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2521ADCFD1500203EB8 /* main.m */; };
 		DEF2F2561ADCFD1500203EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2551ADCFD1500203EB8 /* AppDelegate.m */; };
 		DEF2F2591ADCFD1500203EB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2581ADCFD1500203EB8 /* ViewController.m */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE0024B21B1BF97E00FB33D8 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Views; path = HBCustomView/Views; sourceTree = SOURCE_ROOT; };
 		DEF2F24D1ADCFD1400203EB8 /* HBCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2F2511ADCFD1500203EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF2F2521ADCFD1500203EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				DEF2F27B1ADE0BC500203EB8 /* daijia.bundle */,
 				DEF2F27D1ADF844100203EB8 /* models */,
+				DE0024B21B1BF97E00FB33D8 /* Views */,
 				DEF2F2761ADCFDE500203EB8 /* Controllers */,
 				DEF2F24F1ADCFD1400203EB8 /* HBCustomView */,
 				DEF2F2691ADCFD1500203EB8 /* HBCustomViewTests */,
@@ -239,6 +242,7 @@
 				DEF2F2611ADCFD1500203EB8 /* LaunchScreen.xib in Resources */,
 				DEF2F25E1ADCFD1500203EB8 /* Images.xcassets in Resources */,
 				DEF2F27C1ADE0BC500203EB8 /* daijia.bundle in Resources */,
+				DE0024B31B1BF97E00FB33D8 /* Views in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

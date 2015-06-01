@@ -62,13 +62,16 @@
         
         HBBarButton * button = [[HBBarButton alloc] initWithFrame:CGRectMake(index*kScreenWidth/count, 0, kScreenWidth/count, kTabbarHeight)];
         HBBarButton * btn = [[HBBarButton alloc] initWithFrame:CGRectMake(index*kScreenWidth/count, 0, kScreenWidth/count, kTabbarHeight)];
-        btn.titleLabel.text = title;
         btn.tag = index;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn setTitle:@"hehe" forState:UIControlStateNormal];
+        btn.titleEdgeInsets =  UIEdgeInsetsMake(25, -10, 1, 25);
+        btn.imageEdgeInsets = UIEdgeInsetsMake(5, 20, 20, 10);
+        btn.titleLabel.font = [UIFont systemFontOfSize:9.0f];
         if (index==0){
             [btn setImage:[UIImage imageNamed:@"daijia.bundle/images/订单选中.png"] forState:UIControlStateNormal];
             btn.btnState = TabItemSelected;
+            [btn setBackgroundColor:[UIColor blueColor]];
         }
         else{
             [btn setImage:[UIImage imageNamed:@"daijia.bundle/images/订单.png"] forState:UIControlStateNormal];
@@ -76,6 +79,8 @@
             btn.btnState = TabItemUnSelected;
 
         }
+        [btn setTitle:@"hehe" forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(transfer2ViewController:) forControlEvents:UIControlEventTouchUpInside];
         [btn setExclusiveTouch:YES];
         [_tabBarBtns addObject:btn];

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HBCustomView/Controllers/HBTabbarViewController.m"
-            timestampString = "450876694.9844"
+            timestampString = "450881337.450368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-transfer2ViewController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HBCustomView/Controllers/HBTabbarViewController.m"
-            timestampString = "450876694.9844"
+            timestampString = "450881337.450368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-transfer2ViewController:"
             landmarkType = "5">
          </BreakpointContent>
