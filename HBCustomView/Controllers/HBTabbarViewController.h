@@ -14,6 +14,7 @@
     NSMutableArray * _tabBarBtns;
     UIView * _topBar;
     UIView * _bottomBar;
+    UILabel * _titleLabel;
 }
 @property (nonatomic, copy) NSString * title;
 @property (nonatomic, strong) UIBarButtonItem * barBtnItem;
