@@ -57,6 +57,7 @@
     _selectedView.hidden = NO;
     [self addSubview:_selectedView];
     [self addSubview:_currentView];
+    self.clipsToBounds = YES;
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
     _panGestureRecognizer.minimumNumberOfTouches = 1;
 //    _panGestureRecognizer.maximumNumberOfTouches = 1;

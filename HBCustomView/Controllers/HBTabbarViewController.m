@@ -43,11 +43,11 @@
                            title:(NSString *) title{
     _topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kNavHeight+kStatusBarHeight)];
     _topBar.backgroundColor = color;
-    UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_topBar.center.x-20, _topBar.center.y-10, 40, 20)];
-    titleLabel.text = title;
-    titleLabel.backgroundColor = color;
-    titleLabel.textColor = [UIColor whiteColor];
-    [_topBar addSubview:titleLabel];
+     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_topBar.center.x-20, _topBar.center.y-10, 40, 20)];
+    _titleLabel.text = title;
+    _titleLabel.backgroundColor = color;
+    _titleLabel.textColor = [UIColor whiteColor];
+    [_topBar addSubview:_titleLabel];
     [self.view addSubview:_topBar];
 }
 
@@ -105,8 +105,9 @@
         [self transitionFromViewController:self.currentController toViewController:toVc duration:3.5 options:UIViewAnimationOptionCurveEaseInOut animations:nil completion:^(BOOL finished) {
             NSMutableDictionary * userInfo = [[NSMutableDictionary alloc] init];
             [userInfo setValue:[_tabBarBtns objectAtIndex:weakSelf.selectedIndex] forKey:kPreviousBtn];//存放的是之前的btn
-            self.selectedIndex = btn.tag;
-            self.currentController = toVc;
+            weakSelf.selectedIndex = btn.tag;
+            weakSelf.currentController = toVc;
+            _titleLabel.text = toVc.tabBarItem.title;
             NSNotification * notification = [[NSNotification alloc] initWithName:kBarBtnStateChanged object:btn userInfo:userInfo];
             [[NSNotificationCenter defaultCenter] postNotification:notification];
              NSLog(@"transfer to %ld controller!",(long)btn.tag);
